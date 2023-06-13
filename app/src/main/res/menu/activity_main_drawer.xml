@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_menu"
+            android:icon="@drawable/menu"
+            android:title="@string/menu_menu" />
+        <item
+            android:id="@+id/nav_Deals"
+            android:icon="@drawable/deal"
+            android:title="@string/menu_Deals" />
+        <item
+            android:id="@+id/nav_offer"
+            android:icon="@drawable/offer"
+            android:title="@string/menu_offer" />
+        <item
+            android:id="@+id/nav_DeliverOnTrain"
+            android:icon="@drawable/train"
+            android:title="@string/menu_DeliverOnTrain" />
+        <item
+            android:id="@+id/nav_TrackOrder"
+            android:icon="@drawable/track"
+            android:title="@string/menu_TrackOrder" />
+        <item
+            android:id="@+id/nav_OrderHistory"
+            android:icon="@drawable/file"
+            android:title="@string/menu_OrderHistory" />
+        <item
+            android:id="@+id/nav_FoodITWallet"
+            android:icon="@drawable/ewallet"
+            android:title="@string/menu_FoodITWallet" />
+        <item
+            android:id="@+id/nav_TermsnConditions"
+            android:icon="@drawable/terms"
+            android:title="@string/menu_TermsnConditions" />
+    </group>
+</menu>

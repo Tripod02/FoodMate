@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Food.It</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Customer Name</string>
+    <string name="nav_header_subtitle">CustomerName@gmail.com/Email</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_menu">Menu</string>
+    <string name="menu_Deals">Deals &amp; Offer</string>
+    <string name="menu_offer">1on1Offer</string>
+    <string name="menu_DeliverOnTrain">Deliver On Train</string>
+    <string name="menu_TrackOrder">Track Order</string>
+    <string name="menu_OrderHistory">Order History</string>
+    <string name="menu_FoodITWallet">FoodIT Wallet</string>
+    <string name="menu_TermsnConditions">Terms &amp; Conditions</string>
+</resources>

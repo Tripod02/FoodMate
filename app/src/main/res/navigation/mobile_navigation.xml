@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_menu">
+
+    <fragment
+        android:id="@+id/nav_menu"
+        android:name="com.example.foodit.ui.Menu"
+        android:label="@string/menu_menu"
+        tools:layout="@layout/fragment_menu" />
+
+    <fragment
+        android:id="@+id/nav_Deals"
+        android:name="com.example.foodit.ui.Deals"
+        android:label="@string/menu_Deals"
+        tools:layout="@layout/fragment_deals" />
+
+    <fragment
+        android:id="@+id/nav_offer"
+        android:name="com.example.foodit.ui.Offer"
+        android:label="@string/menu_offer"
+        tools:layout="@layout/fragment_offer" />
+    <fragment
+        android:id="@+id/nav_DeliverOnTrain"
+        android:name="com.example.foodit.ui.DeliverOnTrain"
+        android:label="@string/menu_DeliverOnTrain"
+        tools:layout="@layout/fragment_deliver_on_train" />
+    <fragment
+        android:id="@+id/nav_TrackOrder"
+        android:name="com.example.foodit.ui.TrackOrder"
+        android:label="@string/menu_TrackOrder"
+        tools:layout="@layout/fragment_track_order" />
+    <fragment
+        android:id="@+id/nav_OrderHistory"
+        android:name="com.example.foodit.ui.OrderHistory"
+        android:label="@string/menu_OrderHistory"
+        tools:layout="@layout/fragment_order_history" />
+    <fragment
+        android:id="@+id/nav_FoodITWallet"
+        android:name="com.example.foodit.ui.FoodITWallet"
+        android:label="@string/menu_FoodITWallet"
+        tools:layout="@layout/fragment_food_i_t_wallet" />
+    <fragment
+        android:id="@+id/nav_TermsnConditions"
+        android:name="com.example.foodit.ui.TermsConditions"
+        android:label="@string/menu_TermsnConditions"
+        tools:layout="@layout/fragment_terms_conditions" />
+</navigation>
