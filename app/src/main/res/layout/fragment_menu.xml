@@ -3,6 +3,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mediumGray">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/search_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/search_bg"
+                android:drawableRight="@drawable/search"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/comfortaa_light"
+                android:hint="Search Your Food"
+                android:padding="15dp"
+                android:textColorHint="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_margin="10dp"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:id="@+id/User_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amarante"
+                android:layout_margin="8dp"
+                android:text="Hello User"
+                android:textColor="@color/white"
+                android:textSize="35sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/search_btn"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
+                android:paddingEnd="10dp"/>
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:fontFamily="@font/amarante"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="What's on your mind !"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/User_name" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/for_hor_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/welcome"
+                android:layout_margin="6dp">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
 
 
@@ -11,7 +77,9 @@
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/mediumGray"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
         app:menu="@menu/bottom_menu"
         app:layout_constraintBottom_toBottomOf="parent" />
 

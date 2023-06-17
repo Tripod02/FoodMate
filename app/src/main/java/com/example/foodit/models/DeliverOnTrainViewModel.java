@@ -1,4 +1,4 @@
-package com.example.foodit.ui;
+package com.example.foodit.models;
 
 import androidx.lifecycle.ViewModel;
 

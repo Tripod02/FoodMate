@@ -13,6 +13,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.foodit.R;
+import com.example.foodit.models.TermsConditionsViewModel;
 
 public class TermsConditions extends Fragment {
 
