@@ -17,4 +17,8 @@
     <string name="menu_TermsnConditions">Terms &amp; Conditions</string>
     <string name="menu_cart">Cart</string>
     <string name="menu_profile">Profile</string>
+    <string name="_5_0">5.0</string>
+    <string name="product_name">Product Name</string>
+    <string name="_10_30_23_00">10:30-23:00</string>
+    <string name="min_rs_80">Min - Rs.80</string>
 </resources>
