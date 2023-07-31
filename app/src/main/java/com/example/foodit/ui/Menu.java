@@ -17,6 +17,7 @@ import android.view.ViewGroup;
 import com.example.foodit.R;
 import com.example.foodit.adapters.MenuHzntlAdapter;
 import com.example.foodit.adapters.MenuVerAdapter;
+import com.example.foodit.adapters.UpdateVerticalRecycle;
 import com.example.foodit.models.MenuHzntlModel;
 import com.example.foodit.models.MenuVerModel;
 import com.example.foodit.models.MenuViewModel;
@@ -24,16 +25,16 @@ import com.example.foodit.models.MenuViewModel;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Menu extends Fragment {
+public class Menu extends Fragment implements UpdateVerticalRecycle {
     RecyclerView menuhzntlRec,menuVerRec;
 
 
     ////HORIZONTAL///
-    List<MenuHzntlModel> menuHzntlModelList;
+    ArrayList<MenuHzntlModel> menuHzntlModelList;
     MenuHzntlAdapter menuHzntlAdapter;
 
     ///VERTICAL///
-    List<MenuVerModel>menuVerModelList;
+    ArrayList<MenuVerModel>menuVerModelList;
     MenuVerAdapter menuVerAdapter;
 
     private MenuViewModel mViewModel;
@@ -59,7 +60,7 @@ public class Menu extends Fragment {
         menuHzntlModelList.add(new MenuHzntlModel(R.drawable.fries2,"Fries"));
         menuHzntlModelList.add(new MenuHzntlModel(R.drawable.sandwich3,"Sandwich"));
         menuHzntlModelList.add(new MenuHzntlModel(R.drawable.s2,"Sweets"));
-        menuHzntlAdapter= new MenuHzntlAdapter(getActivity(),menuHzntlModelList);
+        menuHzntlAdapter= new MenuHzntlAdapter(this,getActivity(),menuHzntlModelList);
         menuhzntlRec.setAdapter(menuHzntlAdapter);
         menuhzntlRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.HORIZONTAL,false));
         menuhzntlRec.setHasFixedSize(true);
@@ -69,19 +70,11 @@ public class Menu extends Fragment {
 
                                                                             ///VERTICAL RECYCLER VIEW///
         menuVerModelList=new ArrayList<>();
-        menuVerModelList.add(new MenuVerModel(R.drawable.fav3,"Khana Khazana","10:00-22:00","4.8","Min - Rs.80"));
-        menuVerModelList.add(new MenuVerModel(R.drawable.fries3,"Pind Da Dhaba","09:00-22:00","4.7","Min - Rs.180"));
-        menuVerModelList.add(new MenuVerModel(R.drawable.icecream4,"Rasoi Ghar","10:30-21:45","3.8","Min - Rs.280"));
-        menuVerModelList.add(new MenuVerModel(R.drawable.fav2,"Royal Darbar","10:40-22:50","4.9","Min - Rs.380"));
-        menuVerModelList.add(new MenuVerModel(R.drawable.fav1,"Wave International","10:00-22:20","4.65","Min - Rs.480"));
-        menuVerModelList.add(new MenuVerModel(R.drawable.dinner,"Chhaya Inn","11:00-23:20","4.5","Min - Rs.580"));
-        menuVerModelList.add(new MenuVerModel(R.drawable.burger4,"Blue Diamond","10:30-23:50","3.2","Min - Rs.680"));
-        menuVerModelList.add(new MenuVerModel(R.drawable.breakfast,"ATMOSPHERE","00:00-12:00","2.8","Min - Rs.780"));
+
         menuVerAdapter=new MenuVerAdapter(getActivity(),menuVerModelList);
         menuVerRec.setAdapter(menuVerAdapter);
         menuVerRec.setLayoutManager(new LinearLayoutManager(getActivity(),RecyclerView.VERTICAL,false));
-        menuVerRec.setHasFixedSize(true);
-        menuVerRec.setNestedScrollingEnabled(false);
+
 
                                                                             ///VERTICAL RECYCLER VIEW///
 
@@ -95,4 +88,11 @@ public class Menu extends Fragment {
         // TODO: Use the ViewModel
     }
 
+    @Override
+    public void callBack(int position, ArrayList<MenuVerModel> list) {
+        menuVerAdapter=new MenuVerAdapter(getContext(),list);
+        menuVerAdapter.notifyDataSetChanged();
+        menuVerRec.setAdapter(menuVerAdapter);
+
+    }
 }

@@ -29,6 +29,7 @@
             android:fontFamily="@font/amita"
             android:paddingLeft="10dp"
             android:text="Pizza"
+            android:layout_gravity="center"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="12sp"/>
